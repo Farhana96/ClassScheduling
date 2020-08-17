@@ -1,22 +1,31 @@
+# Group Members
+
+1. SAMAE ARMEEROH (1722098)
+2. HAKIM RUQIYYAH ASMAR ABDUL (1726340)
+3. FARHANA BINTI SUKIMAN (1810244)
+4. NUR ALIAHTUL AIZAN BINTI ALIZAR (1811050)
+
 # Introduction
 
-Describe the algorithms of your choice
+The algorithms that have been chosen are First Come First Serve (FCFS), Shortest Job First (SJF) and Priority Scheduling (PS). 
+	The first algorithm is FCFS, In the "First come first serve" scheduling algorithm, as the name suggests, the process which arrives first, gets executed first, or we can say that the process which requests the CPU first, gets the CPU allocated first. FCFS is just like FIFO (First in First out) Queue data structure, where the data element, which is added to the queue first, is the one who leaves the queue first. 
+  The second algorithm is SJF. This scheduling works on the process with the shortest burst time or duration first. This is the best approach to minimize waiting time. In order to implement it successfully, the burst time/duration time of the processes should be known to the processor in advance, which is practically not feasible all the time. This scheduling algorithm is optimal if all the jobs/processes are available at the same time. 
+  The third algorithm is PS, the priority of a process is generally the inverse of the CPU burst time, for example, the larger the burst time the lower is the priority of that process. In case of priority scheduling the priority is not always set as the inverse of the CPU burst time, rather it can be internally or externally set, but yes the scheduling is done on the basis of priority of the process where the process which is most urgent is processed first, followed by the ones with lesser priority in order. 
 
 # Consideration
 
-Describe what you have considered
+The properties that have been considered to decide which among the algorithms is the best or the worst are the input and the output of the classes. For input, we specifically will emphasize it according to algorithm. For example, the SJF that emphasize on duration, which the duration played a huge impact in this algorithm that later on will influence the output of this processes. For output, we will consider the Average Waiting Time and the Average Turn Around Time. This is because, both of this output will determine which one of the algorithms have the best practices on the class scheduling. 
 
 # Analysis
 
 ## FCFS
 
-Give an analysis of your algo and compare it with the other two
+  In the "First come first serve" scheduling algorithm, as the name suggests, the process which arrives first, is executed first. In this algorithm, the inputs are course code, duration and arrival time. For this class-scheduling scenario, the lecturer’s arrival time will take a huge consideration as it is similar to process that arrives first will run first. Therefore, the arrival time is sorted and the class that the lecturer comes first will started their class first. However, the lower the Average Waiting Time, the better the scheduling algorithm. Among these three algorithms, FCFS have the longest Average Waiting Time, which is 2.6667 that makes it the worst practices for class scheduling implementation. In addition, in real life, if the class schedule depends on the lecturer that arrives first, everyday will be chaos, as the students would not know ahead of their time which class will start first. 
 
 ## Algo2
 
-Give an analysis of your algo and compare it with the other two
+  This algorithm scheduling processes executed in the order in which the shortest job is done first. The inputs are duration, preferred started time, and course code. We use function to find the waiting time for all using findwaitingtime function. After that, we calculate the waiting time. Next, the turnaround time is calculated by adding the burst time and the waiting time. Then, the output are the order of scheduling for the courses, the average waiting time and the average of turnaround time. The average waiting time is 0.666667 and the average around time for SJF is 2.66667. We can see that SJF is better than FCFS and priority scheduling because SJF has a minimum average waiting time, and has the best average turnaround time. Also, SJF leads to higher effectiveness of the system due to lower average time while FCFS lead to lower device and CPU utilization thereby decreasing the efficiency of the system. FCFS scheduling is the simplest scheduling algorithm but it can cause short process to wait for very long process while SJF the average waiting time for given set of process is minimum and there is no idea of average waiting time and response time for priority scheduling. Nevertheless, SJF also have disadvantage as if it can cause process starvation for longer jobs if there are a large number of shorter processes.
 
 ## Algo3
 
-Give an analysis of your algo and compare it with the other two
-
+  Priority scheduling is a method of scheduling processes that is based on priority. The processes with higher priority will be carried out first and the process with lowest priority will be stop. For this class scheduling scenario, we use the non-preemptive priority scheduling, which is if a new process arrives with a higher priority than the current running process, the incoming process will put at the front of the queue so after the current process executed it will be processed. By using this algorithm, the system output for average waiting time is 2.33333, which is between the awaiting time for FCFS and SJF algorithm. Therefore, in this case we can say that we can just continue the current class until it end of the class then we continue with the class with high priority. For example, there are ten students of 4th year that just register for Operating System course but in the mean time the class Operating system for 3rd year is still in progress. Thus, since we used non-preemptive priority scheduling so the current class can execute until the end of the class then the next class can start the class. In priority scheduling also state that the largest burst time the lower priority. Therefore, if the duration of the class is short, the waiting time for the next class is also low. Besides that, they will focus more on the more priority classes first than the less important ones. However, it will bring disadvantage for the low priority class because they have to wait until their turn even though they have been waiting a long time. Lastly, among the three algorithms, the Priority Scheduling can be considered as the second best scheduling after SJF.
